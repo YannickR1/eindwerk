@@ -1,0 +1,309 @@
+// Formulate inputs
+// -----------------------------------------------------------------------------
+
+.formulate-input {
+  // global wrapper styles
+
+  .formulate-input-label {
+    // global label styles
+  }
+
+  .formulate-input-element {
+    // Global field-level wrapper styles
+  }
+
+  .formulate-input-help {
+    // Global help text styles
+  }
+
+  .formulate-input-errors {
+    // Global error message list wrapper
+  }
+
+  .formulate-input-error,
+  .formulate-file-upload-error {
+    // Error message styles
+  }
+
+  .formulate-input-group-item {
+    // Group of items (like list of checkboxes) wrapper
+  }
+
+  // Text inputs
+  // -----------------------------------------------------------------------------
+
+  &[data-classification='text'] {
+    input {
+      // Style all text-like input elements
+    }
+  }
+
+  // Slider inputs
+  // -----------------------------------------------------------------------------
+
+  &[data-classification='slider'] {
+    input {
+      // Style range inputs
+    }
+  }
+
+  // Textarea inputs
+  // -----------------------------------------------------------------------------
+
+  &[data-classification='textarea'] {
+    textarea {
+      // Style textareas
+    }
+  }
+
+  // Button inputs
+  // -----------------------------------------------------------------------------
+
+  &[data-classification='button'] {
+    button {
+      // Style button inputs
+    }
+  }
+
+  // Select lists
+  // -----------------------------------------------------------------------------
+
+  &[data-classification='select'] {
+    select {
+      // Style select lists
+    }
+  }
+
+  // Box inputs
+  // -----------------------------------------------------------------------------
+
+  &[data-classification='box'] {
+    .formulate-input-element {
+      // Box input (checkbox and radio) wrapper (might want flex here)
+      input {
+        // Style box element itself
+      }
+    }
+  }
+
+  // File inputs
+  // -----------------------------------------------------------------------------
+
+  &[data-classification='file'] {
+    // Image uploads
+    // -----------------------------------------------------------------------------
+    .formulate-input-label {
+      display: block;
+      line-height: 1.5;
+      font-size: 0.9em;
+      font-weight: 600;
+      margin-bottom: 0.1em;
+      margin-top: $margin-s;
+    }
+
+    [data-type='image'] {
+      // image uploads
+
+      .formulate-input-upload-area {
+        position: relative;
+        width: 100%;
+        padding: 2em 0;
+
+        input {
+          cursor: pointer;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          opacity: 0;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 5;
+        }
+        &[data-has-files] {
+          input {
+            display: none;
+          }
+        }
+        .formulate-input-upload-area-mask {
+          border-radius: 0.4em;
+          position: absolute;
+          pointer-events: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          border: 2px dashed #a8a8a8;
+          z-index: 2;
+
+          &:before {
+            content: '';
+            background-color: #a8a8a8;
+            -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 58 58'><path d='M29,58A29,29,0,1,0,0,29,29,29,0,0,0,29,58ZM29,4A25,25,0,1,1,4,29,25,25,0,0,1,29,4Z'/><polygon points='27 22 27 44.4 31 44.4 31 22 41.7 31.1 44.3 28.1 29 15 13.7 28.1 16.3 31.1 27 22'/></svg>");
+            mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 58 58'><path d='M29,58A29,29,0,1,0,0,29,29,29,0,0,0,29,58ZM29,4A25,25,0,1,1,4,29,25,25,0,0,1,29,4Z'/><polygon points='27 22 27 44.4 31 44.4 31 22 41.7 31.1 44.3 28.1 29 15 13.7 28.1 16.3 31.1 27 22'/></svg>");
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            pointer-events: none;
+          }
+        }
+
+        .formulate-files {
+          list-style-type: none;
+          .formulate-file {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 0.3em;
+            border: 1px solid #cecece;
+            box-sizing: border-box;
+            background-color: transparent;
+            font-size: 0.9em;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+              Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+              Segoe UI Symbol;
+            padding: 0.75em;
+            display: block;
+            font-weight: 400;
+            line-height: 1.2em;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+          }
+          .formulate-file-image-preview {
+            flex: 0 0 3em;
+            position: relative;
+            z-index: 2;
+            left: -1px;
+            box-shadow: 0 0 0 1px #efefef;
+            transition: transform 0.25s, box-shadow 0.25s,
+              background-color 0.25s;
+          }
+          .formulate-file-image-preview-image {
+            max-width: 200px;
+            max-height: 200px;
+          }
+
+          .formulate-file-name {
+            display: none;
+          }
+          .formulate-file-remove {
+            width: 1.25em;
+            height: 1.25em;
+            border-radius: 1em;
+            border: 1px solid #a8a8a8;
+            background-color: #a8a8a8;
+            cursor: pointer;
+            mask-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 59.1 59.2'><path d='M1.6,57.7a5,5,0,0,0,3.5,1.5,4.85,4.85,0,0,0,3.5-1.5l21-21,21,21a5,5,0,0,0,3.5,1.5,4.85,4.85,0,0,0,3.5-1.5,5,5,0,0,0,0-7.1l-21-21,21-21a5,5,0,0,0,0-7.1,5,5,0,0,0-7.1,0l-21,21L8.6,1.7a5,5,0,0,0-7.1,0,5,5,0,0,0,0,7.1l21,21L1.6,50.7A4.83,4.83,0,0,0,1.6,57.7Z'/></svg>");
+          }
+          .formulate-file-add {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            display: block;
+            min-width: 75px;
+            border: 1px solid $green-uploader;
+            color: $green-uploader;
+            padding: 5px;
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+            font-size: 13px;
+            background-color: transparent;
+            cursor: pointer;
+            margin: 0.5em 0;
+          }
+          .formulate-file-add input {
+            position: absolute;
+            display: block;
+            cursor: pointer;
+          }
+          .formulate-file-progress {
+            background-color: #cecece;
+            height: 0.3em;
+            border-radius: 1.25em;
+            width: 5em;
+            overflow: hidden;
+            position: relative;
+            flex: 0 0 5em;
+            right: 0.75em;
+            transition: height 0.25s, width 0.25s, flex-basis 0.25s;
+            z-index: 2;
+          }
+          .formulate-file-progress .formulate-file-progress-inner {
+            background-color: #41b883;
+            width: 1%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            z-index: 2;
+          }
+          .formulate-file-progress:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            opacity: 0;
+            transform: scale(0.08);
+            background-color: #fff;
+            -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M8.76,56.2c-6.38-6.34,3.26-16,9.64-9.69L38,65.88,80.56,23.29c6.38-6.38,16.07,3.32,9.69,9.69L42.84,80.37a6.83,6.83,0,0,1-9.65,0Z'/></svg>");
+            mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M8.76,56.2c-6.38-6.34,3.26-16,9.64-9.69L38,65.88,80.56,23.29c6.38-6.38,16.07,3.32,9.69,9.69L42.84,80.37a6.83,6.83,0,0,1-9.65,0Z'/></svg>");
+            -webkit-mask-size: 77%;
+            mask-size: 77%;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            z-index: 3;
+          }
+          .formulate-file-progress[data-is-finished] {
+            transition: height 0.25s, width 0.25s, left 0.25s, top, 0.25s,
+              border-radius 0.25s;
+            width: 0.3em;
+            flex: 0 0 0.3em;
+            height: 100%;
+            right: 0;
+            border-radius: 0 0.23em 0.23em 0;
+            &:before {
+              transition: opacity 0.1s;
+              opacity: 0;
+            }
+          }
+        }
+      }
+      .formulate-input-upload-area:hover .formulate-input-upload-area-mask {
+        border: 2px dashed $green-uploader;
+        &.formulate-input-upload-area-mask:before {
+          background-color: $green-uploader;
+        }
+      }
+    }
+  }
+}
+
+// Form-level errors
+// -----------------------------------------------------------------------------
+
+.formulate-form-errors {
+  .formulate-form-error {
+    // form errors (not specific to a field)
+  }
+}

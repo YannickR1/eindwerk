@@ -1,0 +1,98 @@
+//colors
+$dark-blue: #143134;
+$green-blue: #274447;
+$light-rose: hsl(27.6, 82.2%, 82.4%);
+$whitesmoke: whitesmoke;
+$white: white;
+$black: black;
+$grey: grey;
+$wheat: wheat;
+$lightgreen: lightgreen;
+$green-uploader: #41b883;
+$modal-color: hsla(209, 12%, 90%, 1);
+
+//font-sizes
+$font-scale: 1.2;
+$font-size: 1em;
+$font-size-0: $font-size;
+$font-size-1: $font-size * $font-scale;
+$font-size-2: $font-size-1 * $font-scale;
+$font-size-3: $font-size-2 * $font-scale;
+$font-size-4: $font-size-3 * $font-scale;
+$font-size-5: $font-size-4 * $font-scale;
+$font-size-6: $font-size-5 * $font-scale;
+$font-size-7: $font-size-6 * $font-scale;
+$font-size-8: $font-size-7 * $font-scale;
+$font-size-9: $font-size-8 * $font-scale;
+$font-size-10: $font-size-9 * $font-scale;
+$font-size-11: $font-size-10 * $font-scale;
+$font-size-12: $font-size-11 * $font-scale;
+$font-size-13: $font-size-12 * $font-scale;
+$font-size-14: $font-size-13 * $font-scale;
+
+//font-weights
+$font-weight-xs: 200;
+$font-weight-s: 400;
+$font-weight-m: 600;
+$font-weight-l: 800;
+$font-weight-xl: 1000;
+$font-weight-xxl: 2000;
+
+//display
+$display-grid: grid;
+$display-flex: flex;
+$display-block: block;
+$center: center;
+$flex-direction-row: row;
+$flex-direction-column: column;
+$flex-direction-column-reverse: column-reverse;
+$space-evenly: space-evenly;
+$background-no-repeat: no-repeat;
+$no-text-decoration: none;
+$flex-wrap: wrap;
+$space-between: space-between;
+$pos-fixed: fixed;
+$pos-absolute: absolute;
+$pos-relative: relative;
+
+//border-radius
+$border-radius-s: 5px;
+$border-radius-m: 10px;
+$border-radius-l: 15px;
+$border-radius-xl: 30px;
+
+//mediaqueries
+$mq-xs: 400px;
+$mq-s: 600px;
+$mq-m: 800px;
+$mq-m-l: 900px;
+$mq-l: 1000px;
+$mq-xl: 1200px;
+$mq-xl-l: 1400px;
+$mq-xxl: 1500px;
+$mq-xxl-l: 1600px;
+$mq-xxxl: 2000px;
+$site-width: 1300px;
+
+//site-padding
+$site-padding-xs: 20px;
+$site-padding-s: 40px;
+$site-padding-m: 60px;
+$site-padding-l: 80px;
+$site-padding-xl: 80px;
+
+//paddings, en margins
+$padding-s: 0.5em;
+$padding-m: 1em;
+$padding-l: 2em;
+$padding-xl: 3em;
+$padding-xxl: 4em;
+$margin-s: 0.5em;
+$margin-m: 1em;
+$margin-l: 2em;
+$margin-xl: 3em;
+$margin-xxl: 4em;
+$margin-xxxl: 5em;
+
+//animations
+$animation: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);

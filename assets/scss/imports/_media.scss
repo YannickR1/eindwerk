@@ -1,0 +1,7 @@
+@media (pointer: fine) {
+  .formulate-input[data-classification='file']
+    .formulate-files
+    .formulate-file-remove:hover {
+    transform: scale(1.5);
+  }
+}
